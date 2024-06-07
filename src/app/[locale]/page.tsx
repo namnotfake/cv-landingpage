@@ -1,7 +1,9 @@
+import LayoutLeft from "@/components/base/LayoutLeft";
 import { Button } from "@/components/ui/button";
 import {
   IconBrandFacebook,
   IconBrandGmail,
+  IconBrandGoogle,
   IconMessage2,
 } from "@tabler/icons-react";
 import Image from "next/image";
@@ -42,10 +44,13 @@ export default function Home() {
           </Button>
           <Button variant={"outline"} size={"icon"} className="rounded-full">
             <Link href={"https://s.net.vn/IemP"} target="_blank">
-              <IconBrandGmail size={24} stroke={1} />
+              <IconBrandGoogle size={24} stroke={1} />
             </Link>
           </Button>
         </div>
+      </div>
+      <div>
+        <LayoutLeft />
       </div>
     </div>
   );
