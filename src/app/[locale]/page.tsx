@@ -1,23 +1,21 @@
-import LayoutLeft from "@/components/base/LayoutLeft";
+"use client";
+import LayoutLeft from "@/components/components_use/LayoutLeft";
+import LayoutRight from "@/components/components_use/LayoutRight";
 import { Button } from "@/components/ui/button";
-import {
-  IconBrandFacebook,
-  IconBrandGmail,
-  IconBrandGoogle,
-  IconMessage2,
-} from "@tabler/icons-react";
-import Image from "next/image";
+import { useI18n } from "@/locales/config/client";
+import { IconBrandFacebook, IconBrandGoogle } from "@tabler/icons-react";
 import Link from "next/link";
 
 export default function Home() {
+  const t = useI18n();
   return (
-    <div>
+    <div className="mt-6">
       <h1 className="text-4xl font-medium">FRONTEN DEVELOPER</h1>
       <div className="flex justify-between items-center">
         <p>
-          <span className="text-4xl font-medium">PASSION AND</span>
+          <span className="text-4xl font-medium">{t("PASSION AND")}</span>{" "}
           <span className="italic underline text-4xl font-semibold">
-            EXPERIENCE.
+            {t("EXPERIENCE.")}
           </span>
         </p>
         <div className="flex items-center gap-3">
@@ -35,22 +33,15 @@ export default function Home() {
             </Link>
           </Button>
           <Button variant={"outline"} size={"icon"} className="rounded-full">
-            <Link
-              href={"https://www.messenger.com/t/100040664353145"}
-              target="_blank"
-            >
-              <IconMessage2 size={24} stroke={1} />
-            </Link>
-          </Button>
-          <Button variant={"outline"} size={"icon"} className="rounded-full">
             <Link href={"https://s.net.vn/IemP"} target="_blank">
               <IconBrandGoogle size={24} stroke={1} />
             </Link>
           </Button>
         </div>
       </div>
-      <div>
+      <div className="w-full flex items-start mt-6">
         <LayoutLeft />
+        <LayoutRight />
       </div>
     </div>
   );

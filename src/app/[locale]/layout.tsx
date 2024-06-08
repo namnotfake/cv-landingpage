@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <>
       <html lang={params.locale} suppressHydrationWarning>
-        <body className={`${inter.className}`} suppressHydrationWarning>
+        <body suppressHydrationWarning>
           <LayoutClient params={params}>
             {children}
             {modal}

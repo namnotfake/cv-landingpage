@@ -1,5 +1,5 @@
 "use client";
-import Header from "@/components/base/Header";
+import Header from "@/components/components_use/Header";
 import utilState from "@/lib/stores/utilState.store";
 import { I18nProviderClient } from "@/locales/config/client";
 import { useEffect } from "react";
@@ -28,7 +28,7 @@ const LayoutClient = ({
     <I18nProviderClient locale={params.locale}>
       <main className="flex flex-col justify-center items-center">
         <Header />
-        <div className="w-2/3 md:w-11/12">{children}</div>
+        <div className="w-11/12 md:w-2/3">{children}</div>
       </main>
     </I18nProviderClient>
   );
