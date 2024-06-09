@@ -13,12 +13,12 @@ const Header = () => {
 
   const handleScrollToTop = () => {
     if (typeof window !== "undefined") {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   return (
-    <div className="relative w-full px-10 py-3 flex justify-between items-center">
+    <div className="fixed top-0 bg-white z-20 w-full px-10 py-3 flex justify-between items-center">
       <Button
         variant={"ghost"}
         onClick={handleScrollToTop}

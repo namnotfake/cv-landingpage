@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/components_use/Footer";
 import Header from "@/components/components_use/Header";
 import utilState from "@/lib/stores/utilState.store";
 import { I18nProviderClient } from "@/locales/config/client";
@@ -28,7 +29,8 @@ const LayoutClient = ({
     <I18nProviderClient locale={params.locale}>
       <main className="flex flex-col justify-center items-center">
         <Header />
-        <div className="w-11/12 md:w-2/3">{children}</div>
+        <div className="w-11/12 md:w-2/3 mt-14">{children}</div>
+        <Footer />
       </main>
     </I18nProviderClient>
   );
